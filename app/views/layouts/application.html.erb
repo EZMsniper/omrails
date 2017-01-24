@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Omrails</title>
+    <title>Golden Latte's</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,8 @@
   </head>
 
   <body>
+    <%= link_to "Home", root_path %>
+	<%= link_to "Who Am I?", about_path %>
     <%= yield %>
   </body>
 </html>
