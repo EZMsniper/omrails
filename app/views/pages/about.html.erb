@@ -1,6 +1,18 @@
-<div class="jumbotron">
-    <div class="container">
-        <h1>About us</h1>
-        <p>This is the sample project I built for <a href="https://onemonthrails.com">One Month Rails</a>.</p>
+<% if user_signed_in? %>
+    <div class="jumbotron jumbotron-home">
+        <div class="container">
+            <h1>About This Site</h1>
+            <p> You're logged in &amp; exploring the sample web app that I'm building for One Month Rails. </p>
+            <p> I hope you enjoy exploring my app. Email any feedback to ben@ben.com</p>
+            <%= link_to "Upload a *tweet* »", "#", class: "btn btn-primary btn-lg" %> 
+        </div>
     </div>
-</div>
+<% else %>
+    <div class="jumbotron jumbotron-home">
+        <div class="container">
+                <h1>Learn more about this site.</h1>
+                <p>You're exploring the sample web app that I'm building for One Month Rails.</p>
+                <%= link_to "Make an account to explore further  »", "signup", class: "btn btn-primary btn-lg" %> 
+        </div>
+    </div>
+    <% end -%>
